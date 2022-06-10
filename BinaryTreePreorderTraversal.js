@@ -1,3 +1,4 @@
+// Iterative Solution
 var preorderTraversal = function(root) {
     if(!root) {
         return [];
@@ -18,5 +19,21 @@ var preorderTraversal = function(root) {
         }
     }
     
+    return result;
+};
+
+// Recursive Solution 
+var preorderTraversal = function(root) {
+    if(!root) return [];
+    
+    const result = [];
+    const preorder = (node) => {
+        if(!node) return null;
+        
+        result.push(node.val);
+        if(node.left) preorder(node.left);
+        if(node.right) preorder(node.right)
+    }
+    preorder(root);
     return result;
 };
