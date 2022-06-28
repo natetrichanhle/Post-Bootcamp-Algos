@@ -8,7 +8,7 @@ var hasPathSum = function(root, targetSum) {
     let hasPath = false;
 
     // recursive depth first search
-    const dfs(node, sum) => {
+    const dfs = (node, sum) => {
         // When we are at a leaf node
         if (node.left === null && node.right === null) {
             if(sum === node.val) {
